@@ -4,7 +4,7 @@ const button = document.querySelector("button");
 
 function sampleFunction1() {
 	const value = textField.value;
-	if(value.length > 2){
+	if(value.length > 2) {
 		line.textContent = value;
 	}
 	console.log(value);
