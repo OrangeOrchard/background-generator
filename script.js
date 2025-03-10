@@ -1,13 +1,23 @@
-const line = document.getElementById("text");
+const container = document.getElementById("text-container");
 const textField = document.getElementById("field");
 const button = document.querySelector("button");
 
 function sampleFunction1() {
 	const value = textField.value;
+	
 	if(value.length > 2) {
-		line.textContent = value;
+		const line = document.createElement("p");
+		line.textContent = textField.value;
+		container.append(line);
+		
+		textField.value = "";
+		
+		console.log(textField.value);
+	} else if (value.length == 0) {
+		alert("Please enter a value.");
+	} else {
+		alert("Please enter a different value.");
 	}
-	console.log(value);
 }
 
 button.addEventListener("click", sampleFunction1);
