@@ -7,12 +7,13 @@ function sampleFunction1() {
 	
 	if(value.length > 2) {
 		const line = document.createElement("p");
-		line.textContent = textField.value;
+		const value = textField.value;
+		line.textContent = value;
 		container.append(line);
 		
 		textField.value = "";
 		
-		console.log(textField.value);
+		console.log(value);
 	} else if (value.length == 0) {
 		alert("Please enter a value.");
 	} else {
